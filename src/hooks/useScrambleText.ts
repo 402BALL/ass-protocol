@@ -85,10 +85,10 @@ export function useScrambleText({
     isScrambling,
     scramble,
     reset,
-    handlers: scrambleOnHover ? {
-      onMouseEnter: scramble,
-      onMouseLeave: reset
-    } : {}
+    handlers: {
+      onMouseEnter: scrambleOnHover ? scramble : () => {},
+      onMouseLeave: scrambleOnHover ? reset : () => {}
+    }
   };
 }
 
