@@ -1,0 +1,287 @@
+.admin-panel {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.admin-back {
+  background: transparent;
+  border: 2px solid #333;
+  color: #ffffff;
+  padding: 12px 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-back:hover {
+  border-color: #ffffff;
+}
+
+.admin-title {
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.admin-tab {
+  background: transparent;
+  border: 2px solid #333;
+  color: #666;
+  padding: 16px 24px;
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-tab:hover {
+  border-color: #555;
+  color: #999;
+}
+
+.admin-tab--active {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: #1a1a1a;
+}
+
+.admin-content {
+  max-width: 1000px;
+}
+
+.admin-loading,
+.admin-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #444;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Requests */
+.admin-request,
+.admin-token {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  margin-bottom: 16px;
+  border: 2px solid #333;
+  background: #111;
+}
+
+.admin-request--approved {
+  opacity: 0.5;
+  border-color: #1a3a1a;
+}
+
+.admin-request--rejected {
+  opacity: 0.5;
+  border-color: #3a1a1a;
+}
+
+.admin-request__info,
+.admin-token__info {
+  flex: 1;
+}
+
+.admin-request__header,
+.admin-token__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.admin-request__name,
+.admin-token__name {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.admin-request__ticker,
+.admin-token__ticker {
+  font-size: 14px;
+  color: #666;
+}
+
+.admin-request__status,
+.admin-token__status {
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-request__status--pending {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.admin-request__status--approved,
+.admin-token__status--active {
+  background: rgba(50, 205, 50, 0.2);
+  color: #32CD32;
+}
+
+.admin-request__status--rejected,
+.admin-token__status--paused {
+  background: rgba(255, 107, 107, 0.2);
+  color: #FF6B6B;
+}
+
+.admin-request__ca,
+.admin-token__ca {
+  font-family: monospace;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.admin-request__links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.admin-request__links a {
+  color: #4285f4;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.admin-request__links a:hover {
+  text-decoration: underline;
+}
+
+.admin-request__date {
+  font-size: 11px;
+  color: #444;
+}
+
+.admin-token__stats {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: #666;
+}
+
+.admin-request__actions,
+.admin-token__actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.admin-btn {
+  padding: 10px 16px;
+  font-family: var(--font-main);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.admin-btn--approve {
+  background: #32CD32;
+  color: #000;
+}
+
+.admin-btn--approve:hover {
+  background: #28a428;
+}
+
+.admin-btn--reject,
+.admin-btn--pause {
+  background: #FF6B6B;
+  color: #000;
+}
+
+.admin-btn--reject:hover,
+.admin-btn--pause:hover {
+  background: #cc5555;
+}
+
+.admin-btn--activate {
+  background: #32CD32;
+  color: #000;
+}
+
+.admin-btn--delete {
+  background: transparent;
+  border: 1px solid #333;
+  color: #666;
+  padding: 8px 12px;
+}
+
+.admin-btn--delete:hover {
+  border-color: #FF6B6B;
+  color: #FF6B6B;
+}
+
+.admin-btn--add {
+  background: #ffffff;
+  color: #000;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.admin-btn--add:hover {
+  background: #cccccc;
+}
+
+.admin-btn--submit {
+  background: #32CD32;
+  color: #000;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+/* Add Form */
+.admin-add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 2px solid #333;
+  background: #111;
+}
+
+.admin-add-form input {
+  padding: 14px 16px;
+  font-family: var(--font-main);
+  font-size: 14px;
+  background: transparent;
+  border: 2px solid #333;
+  color: #ffffff;
+  outline: none;
+}
+
+.admin-add-form input:focus {
+  border-color: #555;
+}
+
+.admin-add-form input::placeholder {
+  color: #444;
+}
+

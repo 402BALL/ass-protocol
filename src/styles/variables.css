@@ -1,0 +1,117 @@
+:root {
+  /* Light Theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: #000000;
+  --card-border-color: #888888;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  
+  /* Spacing */
+  --header-height: 80px;
+  --container-padding: 40px;
+  --card-gap: 20px;
+  --border-width: 8px;
+  
+  /* Font */
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --text-primary: #ffffff;
+  --text-secondary: #999999;
+  --border-color: #ffffff;
+  --card-border-color: #555555;
+}
+
+/* ===== GLOBAL COLOR STATES ===== */
+/* При hover на карточку — контрастные сочетания акцента и фона */
+
+/* Жёлтый акцент + чёрный фон */
+html[data-active-color="yellow"],
+html[data-active-color="yellow"] body,
+body[data-active-color="yellow"] {
+  --text-primary: #FBC92B !important;
+  --text-secondary: #b8940d !important;
+  --bg-primary: #0a0a0a !important;
+  --bg-secondary: #141414 !important;
+}
+
+/* Розовый акцент + тёмно-фиолетовый фон */
+html[data-active-color="pink"],
+html[data-active-color="pink"] body,
+body[data-active-color="pink"] {
+  --text-primary: #FF1493 !important;
+  --text-secondary: #cc1076 !important;
+  --bg-primary: #1a1040 !important;
+  --bg-secondary: #251560 !important;
+}
+
+/* Синий акцент + тёмно-серый/синий фон */
+html[data-active-color="blue"],
+html[data-active-color="blue"] body,
+body[data-active-color="blue"] {
+  --text-primary: #4285f4 !important;
+  --text-secondary: #3570cc !important;
+  --bg-primary: #1a1f2e !important;
+  --bg-secondary: #252a3d !important;
+}
+
+/* Бирюзовый акцент + серый фон */
+html[data-active-color="cyan"],
+html[data-active-color="cyan"] body,
+body[data-active-color="cyan"] {
+  --text-primary: #00CED1 !important;
+  --text-secondary: #00a5a8 !important;
+  --bg-primary: #1a1a1f !important;
+  --bg-secondary: #25252d !important;
+}
+
+/* Красный/коралловый акцент + тёмно-фиолетовый фон */
+html[data-active-color="coral"],
+html[data-active-color="coral"] body,
+body[data-active-color="coral"] {
+  --text-primary: #FF6B6B !important;
+  --text-secondary: #cc5555 !important;
+  --bg-primary: #1a1040 !important;
+  --bg-secondary: #251560 !important;
+}
+
+/* Фиолетовый акцент + тёмно-синий фон */
+html[data-active-color="purple"],
+html[data-active-color="purple"] body,
+body[data-active-color="purple"] {
+  --text-primary: #9B59B6 !important;
+  --text-secondary: #7d4792 !important;
+  --bg-primary: #0f1a2e !important;
+  --bg-secondary: #152540 !important;
+}
+
+/* Оранжевый акцент + тёмно-коричневый/серый фон */
+html[data-active-color="orange"],
+html[data-active-color="orange"] body,
+body[data-active-color="orange"] {
+  --text-primary: #FF8C00 !important;
+  --text-secondary: #cc7000 !important;
+  --bg-primary: #1a1510 !important;
+  --bg-secondary: #252015 !important;
+}
+
+/* Зелёный акцент + тёмно-серый/тёмный фон */
+html[data-active-color="lime"],
+html[data-active-color="lime"] body,
+body[data-active-color="lime"] {
+  --text-primary: #32CD32 !important;
+  --text-secondary: #28a428 !important;
+  --bg-primary: #0f0f14 !important;
+  --bg-secondary: #1a1a20 !important;
+}

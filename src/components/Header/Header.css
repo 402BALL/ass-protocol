@@ -1,0 +1,123 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--bg-primary) !important;
+  z-index: 100;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: var(--text-primary);
+}
+
+.header__container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.header__logo:hover {
+  transform: scale(1.02);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__nav-item {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: opacity var(--transition-fast);
+}
+
+.header__nav-item:hover {
+  opacity: 0.8;
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--text-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast), background-color 0.4s ease;
+}
+
+.header__nav-item:hover .nav-indicator,
+.header__nav-item.active .nav-indicator {
+  transform: scaleX(1);
+}
+
+/* Toggle buttons */
+.header__theme-toggle,
+.header__sound-toggle,
+.header__lang-toggle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform var(--transition-fast), 
+              border-color 0.4s ease,
+              background-color var(--transition-fast),
+              color 0.4s ease;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.header__theme-toggle:hover,
+.header__sound-toggle:hover,
+.header__lang-toggle:hover {
+  transform: scale(1.1);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.header__theme-toggle svg,
+.header__sound-toggle svg {
+  display: block;
+}
+
+.header__theme-toggle svg rect,
+.header__sound-toggle svg rect {
+  fill: var(--text-primary);
+  transition: fill 0.3s ease;
+}
+
+.header__theme-toggle:hover svg rect,
+.header__sound-toggle:hover svg rect {
+  fill: var(--bg-primary);
+}
+
+.lang-text {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .header__nav {
+    gap: 16px;
+  }
+
+  .header__nav-item:not(.header__theme-toggle):not(.header__sound-toggle):not(.header__lang-toggle) {
+    display: none;
+  }
+}

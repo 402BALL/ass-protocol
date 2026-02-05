@@ -1,0 +1,132 @@
+.how-it-works {
+  padding: 100px 0;
+  border-top: var(--border-width) solid var(--border-color);
+}
+
+.how-it-works__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.how-it-works__label {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.how-it-works__title {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.how-it-works__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.how-it-works__step {
+  position: relative;
+  padding: 32px 24px;
+  border: var(--border-width) solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all var(--transition-fast);
+}
+
+.how-it-works__step:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 var(--text-primary);
+}
+
+.how-it-works__step-number {
+  font-size: 10px;
+  opacity: 0.4;
+  letter-spacing: 2px;
+}
+
+.how-it-works__step-icon {
+  font-size: 32px;
+  color: var(--text-primary);
+}
+
+.how-it-works__step-title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.how-it-works__step-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.how-it-works__step-connector {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--text-primary);
+  z-index: 1;
+}
+
+.how-it-works__formula {
+  padding: 40px;
+  border: var(--border-width) solid var(--border-color);
+  text-align: center;
+  background: var(--bg-secondary);
+}
+
+.how-it-works__formula-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.how-it-works__formula-content {
+  margin-bottom: 16px;
+}
+
+.how-it-works__formula-code {
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+}
+
+.how-it-works__formula-note {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .how-it-works__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-it-works__step-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .how-it-works__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .how-it-works__formula-code {
+    font-size: 11px;
+  }
+}
+

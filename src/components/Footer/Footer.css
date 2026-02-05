@@ -1,0 +1,130 @@
+.footer {
+  position: relative;
+  padding: 40px var(--container-padding);
+  background-color: var(--bg-primary) !important;
+  border-top: var(--border-width) solid var(--border-color);
+  margin-top: auto;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.footer__container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.footer__left {
+}
+
+.footer__copyright {
+  font-size: 9px;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  transition: color 0.4s ease;
+  opacity: 0.7;
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__link {
+  font-size: 10px;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast), color 0.4s ease;
+}
+
+.footer__link:hover {
+  opacity: 1;
+}
+
+.footer__right {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__button {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border: var(--border-width) solid var(--border-color);
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform var(--transition-fast),
+              border-color 0.4s ease,
+              background-color 0.4s ease,
+              color 0.4s ease;
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.footer__button:hover {
+  transform: scale(1.1);
+}
+
+.footer__button-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--text-primary);
+  transition: height 0.1s linear, background-color 0.4s ease;
+  z-index: 0;
+}
+
+.footer__button > span,
+.footer__button > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* Likes button */
+.footer__button--likes {
+  width: auto;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.footer__likes-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer__likes-count {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+  transition: color 0.4s ease;
+}
+
+.footer__likes-label {
+  font-size: 8px;
+  color: var(--text-primary);
+  transition: color 0.4s ease;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer__left {
+    display: none;
+  }
+
+  .footer__button {
+    width: 40px;
+    height: 40px;
+  }
+}
