@@ -17,8 +17,8 @@ export function useScrambleText({
 }: UseScrambleTextOptions) {
   const [displayText, setDisplayText] = useState(text);
   const [isScrambling, setIsScrambling] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>();
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const scramble = useCallback(() => {
     if (isScrambling) return;
@@ -47,7 +47,7 @@ export function useScrambleText({
       iterations++;
 
       if (iterations >= maxIterations) {
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) clearInterval(intervalRef.current);
         setDisplayText(text);
         setIsScrambling(false);
       }
